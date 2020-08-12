@@ -1,0 +1,9 @@
+name = Ting Confirmation
+description = A confirmation after reserveration page
+package = Ding!
+version = "7.x-0.26"
+core = 7.x
+dependencies[] = ting
+dependencies[] = search
+stylesheets[all][] = css/ting_confirmation.css
+

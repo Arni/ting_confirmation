@@ -1,0 +1,43 @@
+<?php //
+
+/**
+ * @file
+ * Enables search using simple search api.
+ */
+
+
+//  function ting_confirmation_menu() {
+//  $items = array();
+//
+//  $items['ting/object/%ting_object/confirmation'] = array(
+//      'title callback' => 'ting_page_title',
+//      'page callback' => 'ting_confirmation_view',
+//      'page arguments' => array(2),
+//      'access arguments' => array('access content'),
+//      //'type' => MENU_CALLBACK,
+//  );
+//
+//  return $items;
+//}
+
+
+function ting_confirmation_theme($existing, $type, $theme, $path) {
+  return array(
+    'ting_confirmation_object' => array(
+      'variables' => array(
+        'message' => NULL,
+        'cover' => NULL,
+      ),
+      'template' => 'confirmation-object',
+      'path' => $path . '/templates',
+    ),
+  );
+}
+
+function ting_confirmation_render($object) {
+  file_put_contents("/var/www/drupal7vm/drupal/debug/conf4.txt", print_r($object, TRUE), FILE_APPEND);
+ $cover = theme('ting_object_cover', array('elements' => array('#object' => $object, '#image_style' => 'ding_list_medium')));
+ $content = theme('status_messages');
+
+ return theme('ting_confirmation_object', array('message' => $content, 'cover' => $cover));
+}
