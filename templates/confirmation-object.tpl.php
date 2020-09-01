@@ -21,9 +21,9 @@
     </div>
 </div>
 <div class="conformation-object-inspiration">
-    <div class="more-link"><a href="#recommender">Find lignende</a></div>
-    <div class="more-link"><a href="/inspiration/inspiration">Bliv inspireret</a></div>
-    <div class="more-link"><a href="https://nytpaahylderne.dk/ranbib">Nyt på hylderne</a>
+    <div class="more-link conformation-object-recommender"><a href="#recommender">Find lignende</a></div>
+    <div class="more-link conformation-object-inspiration"><a href="/inspiration/inspiration">Bliv inspireret</a></div>
+    <div class="more-link conformation-object-nyt"><a href="https://nytpaahylderne.dk/ranbib">Nyt på hylderne</a>
 </div>
 
 
